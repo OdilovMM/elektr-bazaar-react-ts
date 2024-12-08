@@ -52,7 +52,7 @@ const Header: React.FC = () => {
                 <CustomButton>
                   <BsBasket3 size={26} />
                 </CustomButton>
-                <span className="absolute top-[-12px] right-[-10px] bg-red-400 rounded-full px-2">
+                <span className="absolute text-white top-[-12px] right-[-10px] bg-[#ea2b0f] rounded-full px-2">
                   3
                 </span>
               </div>
@@ -61,7 +61,41 @@ const Header: React.FC = () => {
         </div>
       </div>
       {/* navigation bar with dropdown */}
-      <nav>navigations</nav>
+      <nav className="w-full">
+        <div className=" w-[80%] mx-auto flex flex-row h-[45px] ">
+          {/* category btn */}
+          <div className="flex-[3] ">
+            <CustomButton color="secondary" size="large">
+              Product Categories
+            </CustomButton>
+          </div>
+          {/* menus btn */}
+          <div className="flex-[9] flex  w-full ">
+            <ul className="flex flex-wrap justify-between items-center w-full mb-0 gap-4">
+              {[
+                { label: 'Fashion', to: '/fashion' },
+                { label: 'Electronics', to: '/electronics' },
+                { label: 'Bags', to: '/bags' },
+                { label: 'Footwear', to: '/footwear' },
+                { label: 'Groceries', to: '/groceries' },
+                { label: 'Beauty', to: '/beauty' },
+                { label: 'Wellness', to: '/wellness' },
+              ].map((item, index) => (
+                <li
+                  key={index}
+                  className="bg-slate-300 rounded-lg cursor-pointer "
+                >
+                  <Link to={item.to} className="text-slate-700 ">
+                    <CustomButton color="secondary" variant="text">
+                      {item.label}
+                    </CustomButton>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
   );
 };
