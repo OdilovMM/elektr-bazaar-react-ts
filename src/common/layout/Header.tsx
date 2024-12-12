@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { MdOutlineAccountCircle } from 'react-icons/md';
 import { BsBasket3 } from 'react-icons/bs';
 import sublinks from '../utils/Navlinks'; // Adjust the path as needed
+import { SiWearos } from 'react-icons/si';
 
 const Header: React.FC = () => {
   const handleSearch = (query: string) => {
@@ -14,7 +15,7 @@ const Header: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
-    <header className="w-full  pb-[45px]  border-b-2 border-gray-300">
+    <header className="w-full  pb-[45px]  border-b-2 border-gray-300 relative z-50 ">
       {/* upper notification */}
       <div className="bg-[#233a95]">
         <div className="">
@@ -65,8 +66,8 @@ const Header: React.FC = () => {
       </div>
 
       {/* navigation bar with dropdown */}
-      <nav className="w-full ">
-        <div className="w-[80%] mx-auto flex flex-row h-[45px]">
+      <nav className="w-full z-[88888] ">
+        <div className="w-[80%] mx-auto flex flex-row h-[45px] ">
           {/* category btn */}
           <div className="flex-[3] ">
             <CustomButton
@@ -77,14 +78,15 @@ const Header: React.FC = () => {
               Product Categories
             </CustomButton>
             {openMenu && (
-              <div className="w-[227px] bg-white rounded-md shadow-lg">
+              <div className="w-[227px] bg-white rounded-md shadow-lg z-[88888]">
                 <ul className="px-3 py-4 flex flex-col gap-3 cursor-pointer">
                   {sublinks.map((sublink) => (
                     <li key={sublink.pageId}>
                       <Link
                         to={sublink.url}
-                        className="hover:no-underline uppercase"
+                        className="hover:no-underline uppercase px-3 flex items-center justify-start gap-4"
                       >
+                        <SiWearos />
                         {sublink.page}
                       </Link>
                     </li>
@@ -95,7 +97,13 @@ const Header: React.FC = () => {
           </div>
           {/* menus btn */}
           <div className="flex-[9] flex w-full ">
-            <ul className="flex flex-wrap justify-between items-center w-full mb-0 gap-4">
+            <Link
+              to="/"
+              className="hover:no-underline uppercase px-3 flex items-center justify-start gap-4"
+            >
+              Home
+            </Link>
+            <ul className="flex flex-wrap  items-center w-full mb-0 gap-4">
               {sublinks.map((sublink) => (
                 <li
                   key={sublink.pageId}
@@ -111,7 +119,7 @@ const Header: React.FC = () => {
 
                   {/* Subcategory dropdown */}
                   {sublink.links && (
-                    <ul className="absolute w-[180px] uppercase left-0 mt-0 hidden group-hover:block bg-white shadow-lg rounded-md">
+                    <ul className="absolute w-[180px] uppercase left-0 mt-0 hidden group-hover:block bg-white shadow-md rounded-md">
                       {sublink.links.map((link) => (
                         <li
                           key={link.id}

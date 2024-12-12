@@ -7,3 +7,8 @@
 body {
   font-family: 'Lato', 'sens-serif';
 }
+
+.home-banner {
+  position: relative; /* Or whatever you are using */
+  z-index: 0; /* Ensure this is low */
+}
