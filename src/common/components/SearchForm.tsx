@@ -48,7 +48,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
           type="search"
           name="search"
           id="default-search"
-          className="block ml-0 w-full cursor-pointer p-2.5 pl-5 pr-[95px] text-black dark:text-black border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block ml-0 w-full cursor-pointer p-2.5 pl-5 pr-[95px] text-black  border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-[#e3e4e6] dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder={placeholder}
           required
         />

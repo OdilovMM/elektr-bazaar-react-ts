@@ -15,7 +15,7 @@ const HomeBanner = () => {
     arrows: true,
   };
   return (
-    <div className="my-4 relative z-0">
+    <div className="my-4 relative z-0 ">
       <Slider {...settings}>
         {[1, 2, 3, 4, 5].map((g, ind) => (
           <div

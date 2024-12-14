@@ -114,22 +114,6 @@ const sublinks = [
     page: 'groceries',
     pageId: nanoid(),
     url: 'contact',
-    links: [
-      {
-        id: nanoid(),
-        label: 'fruits',
-        icon: <FaDocker />,
-        url: '/contact/customer-review',
-        element: <h1>element</h1>,
-      },
-      {
-        id: nanoid(),
-        label: 'vegetables',
-        icon: <FaGithubSquare />,
-        url: '/contact/email-inquiry',
-        element: <h1>element</h1>,
-      },
-    ],
   },
   {
     page: 'beauty',
@@ -163,36 +147,36 @@ const sublinks = [
     page: 'sports',
     pageId: nanoid(),
     url: 'contact',
-    links: [
-      {
-        id: nanoid(),
-        label: 'indoors',
-        icon: <FaDocker />,
-        url: '/contact/customer-review',
-        element: <h1>element</h1>,
-      },
-      {
-        id: nanoid(),
-        label: 'outdoors',
-        icon: <FaGithubSquare />,
-        url: '/contact/email-inquiry',
-        element: <h1>element</h1>,
-      },
-      {
-        id: nanoid(),
-        label: 'running',
-        icon: <FaGithubSquare />,
-        url: '/contact/email-inquiry',
-        element: <h1>element</h1>,
-      },
-      {
-        id: nanoid(),
-        label: 'diet',
-        icon: <FaGithubSquare />,
-        url: '/contact/email-inquiry',
-        element: <h1>element</h1>,
-      },
-    ],
+  },
+  {
+    pageId: nanoid(),
+    page: 'Digital',
+    url: 'fashion',
+  },
+  {
+    pageId: nanoid(),
+    page: 'Cars',
+    url: 'services',
+  },
+  {
+    page: 'Animals',
+    pageId: nanoid(),
+    url: 'fashion',
+  },
+  {
+    page: 'groceries',
+    pageId: nanoid(),
+    url: 'contact',
+  },
+  {
+    page: 'beauty',
+    pageId: nanoid(),
+    url: 'contact',
+  },
+  {
+    page: 'sports',
+    pageId: nanoid(),
+    url: 'contact',
   },
 ];
 
