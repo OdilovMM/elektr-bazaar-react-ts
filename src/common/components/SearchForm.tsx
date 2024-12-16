@@ -48,13 +48,13 @@ const SearchForm: React.FC<SearchFormProps> = ({
           type="search"
           name="search"
           id="default-search"
-          className="block ml-0 w-full cursor-pointer p-2.5 pl-5 pr-[95px] text-black  border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-[#e3e4e6] dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block ml-0 w-full cursor-pointer p-2.5 pl-5 pr-[95px] text-black  border border-gray-300 rounded-3xl bg-gray-50 focus:ring-blue-500 focus:border-[#e3e4e6] dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder={placeholder}
           required
         />
         <button
           type="submit"
-          className="text-white absolute end-2 bottom-[4.8px] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white absolute end-2 bottom-[4.8px] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           {buttonText}
         </button>

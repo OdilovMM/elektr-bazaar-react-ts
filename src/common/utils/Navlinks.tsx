@@ -178,6 +178,11 @@ const sublinks = [
     pageId: nanoid(),
     url: 'contact',
   },
+  {
+    page: 'toys',
+    pageId: nanoid(),
+    url: 'contact',
+  },
 ];
 
 export default sublinks;
